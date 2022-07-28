@@ -1,8 +1,13 @@
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root{
+    --color_Pari: #207db3;
+    --color_Dispari: #c98128;
+    --color_Pari_hover: #50a8dc;
+    --color_Dispari_hover: #dea560;
+    --color_Button: #1bb766;
+    --color_Button_hover: #4ce093;
+    --color_Win: #24e82a;
+    --color_Lost: #e67460;
 }
 
 .buttons-Pari-Dispari {
@@ -11,7 +16,7 @@
 }
 
 .buttons_Pari {
-    background-color: #198754;
+    background-color: var(--color_Pari);
     border-radius: 5px 0 0 5px;
     border-right: none;
     margin-left: auto;
@@ -19,18 +24,26 @@
 }
 
 .buttons_Dispari {
-    background-color: #dc3545;
+    background-color: var(--color_Dispari);
     border-radius: 0 5px 5px 0;
     margin-right: auto;
     transition: background-color 0.2s;
 }
 
+.color_Pari {
+    color: var(--color_Pari);
+}
+
+.color_Dispari {
+    color: var(--color_Dispari);
+}
+
 .buttons_Pari:hover {
-    background-color: #42ba82;
+    background-color: var(--color_Pari_hover);
 }
 
 .buttons_Dispari:hover {
-    background-color: #df616d;
+    background-color: var(--color_Dispari_hover);
 }
 
 div.input{
@@ -50,23 +63,31 @@ input[type='number']{
     width: 100px;
     padding: 5px;
     border-radius: 10px;
-    background-color: limegreen;
+    background-color: var(--color_Button);
     font-weight: bold;
     transition: background-color 0.2s;
 }
 
-#GoGame:hover {
-    background-color: lightgreen;
+.text_pari{
+    color: var(--color_Pari);
 }
 
-#allertParaghaph > span {
+.text_dispari{
+    color: var(--color_Dispari);
+}
+
+#GoGame:hover {
+    background-color: var(--color_Button_hover);
+}
+
+#allertParaghaph > span, #stato_del_esito {
     font-weight: bold;
 }
 
-#allertParaghaph > span.lost {
-    color: #dc3545;
+#allertParaghaph > span.win {
+    color: var(--color_Win);
 }
 
-#allertParaghaph > span.win {
-    color: green;
+#allertParaghaph > span.lost {
+    color: var(--color_Lost);
 }

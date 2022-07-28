@@ -1,4 +1,11 @@
 
+:root {
+    --color_Button: #1bb766;
+    --color_Button_hover: #4ce093;
+    --color_Success: #24e82a;
+    --color_Outcome: #d39639;
+}
+
 input[type='text'] {
     border-radius: 5px;
     padding: 5px;
@@ -7,7 +14,7 @@ input[type='text'] {
 }
 
 #control_button {
-    background-color: #49de58;
+    background-color: var(--color_Button);
     border-radius: 10px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -15,7 +22,7 @@ input[type='text'] {
 }
 
 #control_button:hover {
-    background-color: #80f68b;
+    background-color: var(--color_Button_hover);
 }
 
 #paragraph > span {
@@ -23,9 +30,9 @@ input[type='text'] {
 }
 
 #paragraph > span#success {
-    color: #35ce44;
+    color: var(--color_Success)
 }
 
 #paragraph > span#outcome {
-    color: #ec7835;
+    color: var(--color_Outcome);
 }

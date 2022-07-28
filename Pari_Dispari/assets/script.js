@@ -17,14 +17,14 @@ DOM_PARI.addEventListener('click', () => {
     // facciamo la variabile in true
     isPari = true;
     // stampiamo nel elemento
-    DOM_P_STATO_DEL_ESITO.innerHTML = 'PARI';
+    DOM_P_STATO_DEL_ESITO.innerHTML = `<span class='color_Pari'>PARI</span>`;
 });
 
 DOM_DISPARI.addEventListener('click', () => {
     // facciamo la variabile in false
     isPari = false;
     // stampiamo nel elemento
-    DOM_P_STATO_DEL_ESITO.innerHTML = 'DISPARI';
+    DOM_P_STATO_DEL_ESITO.innerHTML = `<span class='color_Dispari'>DISPARI</span>`;
 });
 
 // al click del pulsante gioca chiama la funzione pricipale
@@ -63,22 +63,22 @@ function GoGame() {
         }
 
         // ALRIMENTI: manda messaggio al giocatore
-        DOM_PARAGRAPH_ALERT.innerHTML = 'ATTENZIONE: Il numero inserito non e un numero tra 1 e 5';
+        DOM_PARAGRAPH_ALERT.innerHTML = `<span class='lost'>ATTENZIONE:</span> Il numero inserito non e un numero tra 1 e 5`;
         return;
     }
     
     // ALRIMENTI: manda messaggio al giocatore
-    DOM_PARAGRAPH_ALERT.innerHTML = 'ATTENZIONE: Non hai schelto tra Pari o Dispari';
+    DOM_PARAGRAPH_ALERT.innerHTML = `<span class='lost'>ATTENZIONE:</span> Non hai schelto tra <span class='color_Pari'>PARI</span> o <span class='color_Dispari'>DISPARI</span>`;
 }
 
 
 // una funzione per la vittoria che chiede vari parametri
 function win(player, PC) {
-    DOM_PARAGRAPH_ALERT.innerHTML = `Tu hai inserito ${player} è il PC ha messo ${PC} = ${player + PC} quindi hai <span class='win'>VINTO</span>!`;
+    DOM_PARAGRAPH_ALERT.innerHTML = `Tu hai inserito <span>${player}</span> è il PC ha messo <span>${PC}</span> = <span>${player + PC}</span> quindi <span class='win'>HAI VINTO!</span>`;
 }
 
 
 // una funzione per la perdita che chiede vari parametri
 function lost(player, PC) {
-    DOM_PARAGRAPH_ALERT.innerHTML = `Tu hai inserito ${player} è il PC ha messo ${PC} = ${player + PC} per ciò hai <span class='lost'>PERSO</span>!`;
+    DOM_PARAGRAPH_ALERT.innerHTML = `Tu hai inserito <span>${player}</span> è il PC ha messo <span>${PC}</span> = <span>${player + PC}</span> per ciò <span class='lost'>HAI PERSO!</span>`;
 }
