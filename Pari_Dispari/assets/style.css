@@ -1,0 +1,72 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.buttons-Pari-Dispari {
+    width: 100px;
+    font-weight: bold;
+}
+
+.buttons_Pari {
+    background-color: #198754;
+    border-radius: 5px 0 0 5px;
+    border-right: none;
+    margin-left: auto;
+    transition: background-color 0.2s;
+}
+
+.buttons_Dispari {
+    background-color: #dc3545;
+    border-radius: 0 5px 5px 0;
+    margin-right: auto;
+    transition: background-color 0.2s;
+}
+
+.buttons_Pari:hover {
+    background-color: #42ba82;
+}
+
+.buttons_Dispari:hover {
+    background-color: #df616d;
+}
+
+div.input{
+    text-align: center;
+    margin: 10px 0;
+}
+
+input[type='number']{
+    display: block;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+#GoGame {
+    width: 100px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: limegreen;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+#GoGame:hover {
+    background-color: lightgreen;
+}
+
+#allertParaghaph > span {
+    font-weight: bold;
+}
+
+#allertParaghaph > span.lost {
+    color: #dc3545;
+}
+
+#allertParaghaph > span.win {
+    color: green;
+}
