@@ -1,0 +1,31 @@
+
+input[type='text'] {
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+#control_button {
+    background-color: #49de58;
+    border-radius: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.2s;
+}
+
+#control_button:hover {
+    background-color: #80f68b;
+}
+
+#paragraph > span {
+    font-weight: bold;
+}
+
+#paragraph > span#success {
+    color: #35ce44;
+}
+
+#paragraph > span#outcome {
+    color: #ec7835;
+}
