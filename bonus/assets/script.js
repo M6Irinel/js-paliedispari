@@ -7,8 +7,10 @@ const DOM_PARAGRAPH = document.querySelector('#paragraph');
 
 // creaiamo una funzione che dice se la parola del utente e una parola PALINDROMA
 function controlloParola(parola) {
+    // creaiamo una nuova varibile con la stringa sistemata e pronta per il controllo
+    parola = parola.replaceAll(/\W/g ,'').trim().toLowerCase();
     // restituendo true o false
-    return parola.split("").reverse().join("") === parola;
+    return parola.replaceAll(' ', '').split('').reverse().join('') === parola;
 }
 
 
@@ -25,13 +27,13 @@ DOM_BUTTON.addEventListener('click', ()=>{
         if(controlloParola(parola_Utente)){
 
             // stampiamo nell'elemento del DOM la seguente stringa
-            DOM_PARAGRAPH.innerHTML = `La tua parola "<span>${parola_Utente}</span>" è una parola Palindroma. <span id='success'>COMPLIMENTI!</span>`;
+            DOM_PARAGRAPH.innerHTML = `La tua stringa "<span>${parola_Utente}</span>" è una stringa Palindroma. <span id='success'>COMPLIMENTI!</span>`;
         }
         // ALTRIMENTI: da false
         else {
             
             // stampiamo nell'elemento del DOM la seguente stringa
-            DOM_PARAGRAPH.innerHTML = `La tua parola "<span>${parola_Utente}</span>" <span>NON</span> è una parola Palindroma. <span id='outcome'>Controlla altre</span>`;
+            DOM_PARAGRAPH.innerHTML = `La tua stringa "<span>${parola_Utente}</span>" <span>NON</span> è una stringa Palindroma. <span id='outcome'>Controlla altre</span>`;
         }
 
         return;
@@ -41,13 +43,13 @@ DOM_BUTTON.addEventListener('click', ()=>{
     if(DOM_TEXT_UTENTE.value.trim() !== ''){
 
         // stampiamo nell'elemento del DOM la seguente stringa
-        DOM_PARAGRAPH.innerHTML = `<span class='text-danger'>ATTENZIONE</span>: Inserisci abbastanza lettere per avere una parola. Minimo 3 lettere`;
+        DOM_PARAGRAPH.innerHTML = `<span class='text-danger'>ATTENZIONE</span>: Inserisci abbastanza lettere per avere una stringa. Minimo 3 lettere`;
     
         return;
     }
 
     // ALTRIMANTI: avvertire l'utente della compilazione
-    DOM_PARAGRAPH.innerHTML = `<span class='text-danger'>ATTENZIONE</span>: Non hai inserito ancora nessuna parola`;
+    DOM_PARAGRAPH.innerHTML = `<span class='text-danger'>ATTENZIONE</span>: Non hai inserito ancora nessuna stringa`;
 
     return;
 });
